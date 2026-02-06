@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRTX SMARTLINKS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: 'Dela Gothic One', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: clamp(24px, 8vw, 48px); /* Адаптивный размер шрифта */
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #00FF00;
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 0px; /* Квадратная кнопка в стиле Dela */
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(0, 255, 0, 0.6);
+            background-color: #05ff05;
+            cursor: pointer;
+        }
+
+        /* Добавил легкое свечение для фона */
+        body::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 255, 0, 0.05) 0%, rgba(0, 0, 0, 1) 70%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>VERTEX SMARTLINKS</h1>
+
+    <a href="http://vrtx-link.v6.rocks/smartlinks" class="btn">SEE OUR LINKS</a>
+
+</body>
+</html>
