@@ -17,10 +17,11 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            position: relative; /* Для позиционирования кнопки */
+            position: relative;
             overflow-x: hidden;
         }
 
+        /* Кнопка в углу */
         .header-btn {
             position: absolute;
             top: 20px;
@@ -31,29 +32,42 @@
             padding: 10px 20px;
             font-size: 14px;
             text-transform: uppercase;
-            border-radius: 2px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
-            transition: all 0.3s ease;
-            z-index: 10; /* Чтобы кнопка была над другими элементами */
+            transition: 0.3s;
+            z-index: 10;
         }
 
         .header-btn:hover {
+            transform: scale(1.05);
             background-color: #05ff05;
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
         }
 
+        /* Карточка-ссылка (Редирект на mtgbrta) */
         .release-card {
+            text-decoration: none; /* Убираем подчеркивание ссылки */
+            color: inherit;       /* Сохраняем зеленый цвет текста */
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             max-width: 340px;
-            background-color: #111; /* Темнее, чтобы выделить */
+            background-color: #0a0a0a;
             border: 2px solid #00FF00;
             padding: 20px;
             box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
-            margin-bottom: 30px; /* Отступ между карточками, если будут другие */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Эффект при наведении на всю карточку */
+        .release-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(0, 255, 0, 0.4);
+            cursor: pointer;
+        }
+
+        /* Эффект при нажатии */
+        .release-card:active {
+            transform: scale(0.98);
         }
 
         .cover-img {
@@ -64,31 +78,25 @@
             margin-bottom: 20px;
         }
 
-        .release-info {
-            text-align: center;
-        }
-
         .track-name {
-            font-size: clamp(20px, 6vw, 32px); /* Адаптивный размер */
+            font-size: 26px;
             margin: 0;
+            text-align: center;
             line-height: 1.2;
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
         }
 
         .artist-name {
-            font-size: clamp(14px, 4vw, 22px); /* Адаптивный размер */
+            font-size: 18px;
             opacity: 0.8;
-            margin-top: 5px;
-            letter-spacing: 1px;
+            margin-top: 10px;
+            text-align: center;
         }
 
         .footer-logo {
-            font-size: 16px;
-            position: absolute;
-            bottom: 20px;
-            opacity: 0.6;
-            letter-spacing: 2px;
-            font-family: sans-serif;
+            margin-top: 40px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            opacity: 0.5;
         }
     </style>
 </head>
@@ -96,14 +104,14 @@
 
     <a href="http://vrtx-link.v6.rocks/sites" class="header-btn">SITES</a>
 
-    <div class="release-card">
+    <a href="http://vrtx-link.v6.rocks/mtgbrta" class="release-card">
         <img src="MONTAGEM BERRETA.jpg" alt="MONTAGEM BERRETA Cover" class="cover-img">
         <div class="release-info">
             <h2 class="track-name">MONTAGEM BERRETA</h2>
             <h3 class="artist-name">LXNGT!ME</h3>
         </div>
-    </div>
-    
+    </a>
+
     <div class="footer-logo">VERTEX MUSIC</div>
 
 </body>
