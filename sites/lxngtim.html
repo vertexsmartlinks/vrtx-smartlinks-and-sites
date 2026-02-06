@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXNGT!ME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #8A2BE2; /* Фиолетовый цвет текста */
+            font-family: 'Dela Gothic One', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Аватарка артиста */
+        .avatar-box {
+            width: 180px;
+            height: 180px;
+            border: 3px solid #8A2BE2; /* Фиолетовая рамка */
+            border-radius: 50%; /* Круглая аватарка */
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.4); /* Фиолетовое свечение */
+            margin-bottom: 30px;
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Имя артиста */
+        .artist-name {
+            font-size: clamp(28px, 8vw, 48px);
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+            letter-spacing: 2px;
+        }
+
+        /* Блок с соцсетями */
+        .social-links {
+            width: 100%;
+            max-width: 320px;
+            margin-bottom: 50px;
+        }
+
+        .social-btn {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background-color: transparent;
+            border: 2px solid #8A2BE2; /* Фиолетовая рамка */
+            color: #8A2BE2;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+
+        .social-btn:hover {
+            background-color: #8A2BE2;
+            color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.7);
+        }
+
+        .social-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .footer-logo {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            letter-spacing: 4px;
+            opacity: 0.5;
+            font-family: Dela Gothic One;
+            color: #8A2BE2; /* Фиолетовый футер */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="avatar-box">
+        <img src="bomboclac.jpg" alt="LXNGT!ME Avatar">
+    </div>
+
+    <h1 class="artist-name">LXNGT!ME</h1>
+
+    <div class="social-links">
+        <a href="https://www.youtube.com/@LXNGTIME" target="_blank" class="social-btn">YouTube</a>
+        <a href="https://t.me/lxngt1me" target="_blank" class="social-btn">Telegram</a>
+        <a href="https://vk.com/lxngtime" target="_blank" class="social-btn">VK</a>
+    </div>
+
+    <div class="footer-logo">VERTEX MUSIC</div>
+
+</body>
+</html>
