@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRTX Smartlinks - LXNGT!ME</title>
+    <title>VRTX SITES</title>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,10 +17,10 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            position: relative; /* Для позиционирования кнопки */
-            overflow-x: hidden;
+            position: relative;
         }
 
+        /* Кнопка в углу */
         .header-btn {
             position: absolute;
             top: 20px;
@@ -31,80 +31,70 @@
             padding: 10px 20px;
             font-size: 14px;
             text-transform: uppercase;
-            border-radius: 2px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
-            transition: all 0.3s ease;
-            z-index: 10; /* Чтобы кнопка была над другими элементами */
+            transition: 0.3s;
         }
 
         .header-btn:hover {
+            transform: scale(1.05);
             background-color: #05ff05;
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
         }
 
-        .release-card {
+        /* Карточка-ссылка */
+        .artist-card {
+            text-decoration: none;
+            color: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
-            max-width: 340px;
-            background-color: #111; /* Темнее, чтобы выделить */
-            border: 2px solid #00FF00;
-            padding: 20px;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
-            margin-bottom: 30px; /* Отступ между карточками, если будут другие */
+            transition: 0.3s;
         }
 
-        .cover-img {
+        .artist-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cover-box {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #00FF00;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+            overflow: hidden;
+        }
+
+        img {
             width: 100%;
-            aspect-ratio: 1/1;
+            height: 100%;
             object-fit: cover;
-            border: 2px solid #00FF00;
-            margin-bottom: 20px;
         }
 
-        .release-info {
-            text-align: center;
-        }
-
-        .track-name {
-            font-size: clamp(20px, 6vw, 32px); /* Адаптивный размер */
-            margin: 0;
-            line-height: 1.2;
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-        }
-
-        .artist-name {
-            font-size: clamp(14px, 4vw, 22px); /* Адаптивный размер */
-            opacity: 0.8;
-            margin-top: 5px;
+        .label-text {
+            margin-top: 20px;
+            font-size: 24px;
             letter-spacing: 1px;
         }
 
-        .footer-logo {
-            font-size: 16px;
+        .vrtx-footer {
             position: absolute;
             bottom: 20px;
-            opacity: 0.6;
-            letter-spacing: 2px;
-            font-family: sans-serif;
+            font-size: 14px;
+            letter-spacing: 4px;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
-    <a href="http://vrtx-link.v6.rocks/sites" class="header-btn">SITES</a>
+    <a href="http://vrtx-link.v6.rocks/sites/lxngtim" class="header-btn">GO TO LXNGTIM</a>
 
-    <div class="release-card">
-        <img src="MONTAGEM BERRETA.jpg" alt="MONTAGEM BERRETA Cover" class="cover-img">
-        <div class="release-info">
-            <h2 class="track-name">MONTAGEM BERRETA</h2>
-            <h3 class="artist-name">LXNGT!ME</h3>
+    <a href="http://vrtx-link.v6.rocks/sites/lxngtim" class="artist-card">
+        <div class="cover-box">
+            <img src="MONTAGEM BERRETA.jpg" alt="LXNGT!ME">
         </div>
-    </div>
-    
-    <div class="footer-logo">VERTEX MUSIC</div>
+        <div class="label-text">LXNGT!ME</div>
+    </a>
+
+    <div class="vrtx-footer">VERTEX MUSIC</div>
 
 </body>
 </html>
