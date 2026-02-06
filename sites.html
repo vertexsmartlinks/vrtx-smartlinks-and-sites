@@ -3,98 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRTX SITES</title>
+    <title>VRTX - PROJECTS</title>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-color: #000000;
-            color: #00FF00;
+            color: #00FF00; /* Основной цвет VERTEX */
             font-family: 'Dela Gothic One', cursive;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            position: relative;
+            padding: 60px 20px;
         }
 
-        /* Кнопка в углу */
-        .header-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #00FF00;
-            color: #000000;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 14px;
+        h1 {
+            font-size: clamp(24px, 6vw, 42px);
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
-            transition: 0.3s;
         }
 
-        .header-btn:hover {
-            transform: scale(1.05);
-            background-color: #05ff05;
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
         }
 
-        /* Карточка-ссылка */
-        .artist-card {
+        .card {
             text-decoration: none;
-            color: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: 0.3s;
+            width: 280px;
+            transition: 0.3s ease;
         }
 
-        .artist-card:hover {
-            transform: translateY(-10px);
+        .card:hover {
+            transform: scale(1.05);
         }
 
-        .cover-box {
-            width: 300px;
-            height: 300px;
-            border: 3px solid #00FF00;
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+        .img-container {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border: 3px solid;
             overflow: hidden;
+            margin-bottom: 15px;
         }
 
-        img {
+        .img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .label-text {
-            margin-top: 20px;
-            font-size: 24px;
-            letter-spacing: 1px;
+        .name {
+            font-size: 20px;
+            text-transform: uppercase;
         }
 
+        /* Индивидуальные стили для каждого кента */
+        .lxngtime { color: #8A2BE2; }
+        .lxngtime .img-container { border-color: #8A2BE2; }
+
+        .lxvely { color: #b366ff; }
+        .lxvely .img-container { border-color: #b366ff; }
+
         .vrtx-footer {
-            position: absolute;
-            bottom: 20px;
+            margin-top: auto;
+            padding-top: 60px;
             font-size: 14px;
-            letter-spacing: 4px;
-            opacity: 0.5;
+            letter-spacing: 5px;
+            opacity: 0.4;
         }
     </style>
 </head>
 <body>
 
-    <a href="http://vrtx-link.v6.rocks/sites/lxngtim" class="header-btn">GO TO LXNGTIM</a>
+    <h1>VRTX PROJECTS</h1>
 
-    <a href="http://vrtx-link.v6.rocks/sites/lxngtim" class="artist-card">
-        <div class="cover-box">
-            <img src="MONTAGEM BERRETA.jpg" alt="LXNGT!ME">
-        </div>
-        <div class="label-text">LXNGT!ME</div>
-    </a>
+    <div class="projects-grid">
+        
+        <a href="http://vrtx-link.v6.rocks/sites/lxngtim" class="card lxngtime">
+            <div class="img-container">
+                <img src="MONTAGEM BERRETA.jpg" alt="LXNGT!ME">
+            </div>
+            <div class="name">LXNGT!ME</div>
+        </a>
 
-    <div class="vrtx-footer">VERTEX MUSIC</div>
+        <a href="http://vrtx-link.v6.rocks/sites/lxvely" class="card lxvely">
+            <div class="img-container">
+                <img src="ловли.jpg" alt="LXVELY">
+            </div>
+            <div class="name">LXVELY</div>
+        </a>
+
+    </div>
+
+    <div class="vrtx-footer">VERTEX SMARTLINKS</div>
 
 </body>
 </html>
